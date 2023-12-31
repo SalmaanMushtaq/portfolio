@@ -48,7 +48,7 @@ const Home = () => {
               Web Developer
             </Typography>
             <a
-              href="./assets/cv/SalmaanMushtaq.pdf"
+              href="/assets/cv/SalmaanMushtaq.pdf"
               download="SalmaanMushtaq-Resume.pdf"
               className="downloadCvBtn"
             >
@@ -59,7 +59,7 @@ const Home = () => {
         <Grid item xs={12} lg={6}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <img
-              src="./home.png"
+              src="/home.png"
               alt="Salmaan"
               loading="lazy"
               style={{ maxWidth: "100%", height: "auto" }}
