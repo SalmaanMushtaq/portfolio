@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
 import SpinnerFullPage from "./components/SpinnerFullPage";
@@ -18,7 +18,7 @@ function App() {
         <Suspense fallback={<SpinnerFullPage />}>
           <Navbar />
           <Routes>
-            <Route index element={<Home />} />
+            <Route path="/" element={<Navigate to="/home" />} />
             <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="skills" element={<Skills />} />
