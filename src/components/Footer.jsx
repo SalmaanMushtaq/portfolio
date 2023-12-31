@@ -15,10 +15,35 @@ function Footer() {
         <Grid item xs lg={3} md>
           <Box>
             <small>
-              Follow Me :<i className="bi bi-facebook"></i>
-              <i className="bi bi-twitter text-white"></i>
-              <i className="bi bi-linkedin text-white"></i>
-              <i className="bi bi-github text-white"></i>
+              Follow Me:
+              <a
+                href="https://fb.com/prince.elsa.9028"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-facebook"></i>
+              </a>
+              <a
+                href="https://twitter.com/username"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-twitter text-white"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/salmaan-mushtaq-5b4998242"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-linkedin text-white"></i>
+              </a>
+              <a
+                href="https://github.com/SalmaanMushtaq"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-github text-white"></i>
+              </a>
             </small>
           </Box>
         </Grid>

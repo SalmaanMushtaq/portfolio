@@ -41,7 +41,7 @@ const About = () => {
               }}
             >
               <img
-                src="./ownpictures/about-me.jpeg"
+                src="./about-me.jpeg"
                 alt="Salmaan"
                 loading="lazy"
                 className="responsive-image"
@@ -89,10 +89,34 @@ const About = () => {
               <Box style={{ marginTop: "6%" }}>
                 <small>
                   Share<strong>:</strong>
-                  <i className="bi bi-facebook"></i>
-                  <i className="bi bi-twitter text-white"></i>
-                  <i className="bi bi-linkedin text-white"></i>
-                  <i className="bi bi-github text-white"></i>
+                  <a
+                    href="https://www.facebook.com/your-facebook-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="bi bi-facebook"></i>
+                  </a>
+                  <a
+                    href="https://twitter.com/your-twitter-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="bi bi-twitter text-white"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/your-linkedin-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="bi bi-linkedin text-white"></i>
+                  </a>
+                  <a
+                    href="https://github.com/your-github-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="bi bi-github text-white"></i>
+                  </a>
                 </small>
               </Box>
             </Box>
