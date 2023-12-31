@@ -145,7 +145,9 @@ function Navbar() {
                   }}
                   className={styles.btn}
                 >
-                  <NavLink to={`/${page.toLowerCase()}`}>{page}</NavLink>
+                  <NavLink to={`/${page.toLowerCase()}`} end>
+                    {page}
+                  </NavLink>
                 </Button>
               ))}
             </Box>

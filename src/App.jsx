@@ -18,8 +18,8 @@ function App() {
         <Suspense fallback={<SpinnerFullPage />}>
           <Navbar />
           <Routes>
-            {/* <Route index element={<Home />} /> */}
-            <Route path="/:page?" element={<Home />} />
+            <Route index element={<Home />} />
+            <Route path="home" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="skills" element={<Skills />} />
             <Route path="works" element={<Works />} />
