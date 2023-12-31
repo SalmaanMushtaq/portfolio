@@ -5,15 +5,15 @@ const Skill = ({ skills, animationComplete }) => {
   return (
     <Grid
       container
-      spacing={1}
-      margin={2}
       className="container"
       alignItems="flex-start"
+      height="auto"
+      marginTop={3}
     >
       <Grid item xs={12} md={12}>
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
           {skills.map((skill, index) => (
-            <Grid item xs={6} key={index}>
+            <Grid item xs={12} lg={6} key={index}>
               <Card
                 style={{
                   backgroundColor: "transparent",
