@@ -62,7 +62,7 @@ const Skills = () => {
           </Grid>
           <Grid item xs={4} md={2}>
             <a
-              href="./assests/cv/SalmaanMushtaq.pdf"
+              href="./assets/cv/SalmaanMushtaq.pdf"
               className="downloadCvBtn"
               download="SalmaanMushtaq-Resume.pdf"
             >

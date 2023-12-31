@@ -41,7 +41,7 @@ const About = () => {
               }}
             >
               <img
-                src="../src/assets/ownpictures/about-me.jpeg"
+                src="./assets/ownpictures/about-me.jpeg"
                 alt="Salmaan"
                 loading="lazy"
                 className="responsive-image"
