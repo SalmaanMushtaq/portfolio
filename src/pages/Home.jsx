@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, Button } from "@mui/material";
 
 const Home = () => {
   return (
@@ -9,6 +9,7 @@ const Home = () => {
         alignItems: "center",
         justifyContent: "center",
         minHeight: "100vh",
+        padding: "16px",
       }}
     >
       <Grid container spacing={2} className="container">
@@ -18,13 +19,12 @@ const Home = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              textAlign: "center",
             }}
           >
             <Typography
               variant="h4"
               sx={{
-                mr: 2,
-                ml: 3,
                 fontFamily: "Cinzel",
                 fontWeight: 600,
                 letterSpacing: ".1rem",
@@ -37,23 +37,28 @@ const Home = () => {
               variant="h6"
               component="a"
               sx={{
-                mr: 2,
-                ml: 3,
                 fontFamily: "Cinzel",
                 fontWeight: 300,
                 letterSpacing: ".1rem",
                 color: "inherit",
+                marginTop: 1,
               }}
             >
               Web Developer
             </Typography>
-            <a
+            <Button
+              variant="outlined"
               href="./assets/cv/SalmaanMushtaq.pdf"
               download="SalmaanMushtaq-Resume.pdf"
-              className="downloadCvBtn"
+              sx={{
+                color: "white",
+                borderColor: "white",
+                marginTop: 2,
+              }}
+              startIcon={<i className="bi bi-download"></i>}
             >
-              <i className="bi bi-download"></i> Download CV
-            </a>
+              Download CV
+            </Button>
           </Box>
         </Grid>
         <Grid item xs={12} lg={6}>

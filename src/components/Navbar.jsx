@@ -89,11 +89,12 @@ function Navbar() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page}>
                     <Typography textAlign="center">
                       <NavLink
                         to={`/${page.toLowerCase()}`}
                         className={styles.btn}
+                        onClick={handleCloseNavMenu}
                       >
                         {page}
                       </NavLink>
@@ -102,17 +103,16 @@ function Navbar() {
                 ))}
               </Menu>
             </Box>
-            <Logo sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+            {/* <Logo sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
             <Typography
-              variant="h5"
+              variant="h6"
               noWrap
               component="a"
               sx={{
-                mr: 2,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
                 fontFamily: "Cinzel",
-                fontWeight: 700,
+                fontWeight: 400,
                 letterSpacing: ".1rem",
                 color: "inherit",
                 textDecoration: "none",
@@ -145,9 +145,7 @@ function Navbar() {
                   }}
                   className={styles.btn}
                 >
-                  <NavLink to={`/${page.toLowerCase()}`} end>
-                    {page}
-                  </NavLink>
+                  <NavLink to={`/${page.toLowerCase()}`}>{page}</NavLink>
                 </Button>
               ))}
             </Box>
