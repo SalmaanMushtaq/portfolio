@@ -1,0 +1,13 @@
+.para {
+  line-height: 1.5rem;
+  text-wrap: wrap;
+  text-align: justify;
+  margin-top: 2rem;
+}
+.icons {
+  margin-right: 10px;
+}
+.boxContainer {
+  margin: 15px;
+  padding: 20px;
+}
