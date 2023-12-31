@@ -1,1 +1,0 @@
-import{j as e,B as n}from"./index-LopPdC1J.js";const s=()=>e.jsx(e.Fragment,{children:e.jsx(n,{sx:{margin:" 0px 20px",padding:"20px"},children:e.jsx(n,{sx:{flexGrow:1,display:"flex",justifyContent:"center",alignItems:"center",minHeight:"58vh",marginTop:"2.5rem"},children:"Comming Soon 😊😊"})})});export{s as default};
