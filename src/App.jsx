@@ -14,7 +14,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio">
         <Suspense fallback={<SpinnerFullPage />}>
           <Navbar />
           <Routes>
