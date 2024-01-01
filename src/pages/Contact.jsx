@@ -1,6 +1,7 @@
-import { Box, Grid, TextField, Button } from "@mui/material";
+import { Box, Grid, TextField, Button, Alert } from "@mui/material";
 import { outlinedInputClasses } from "@mui/material/OutlinedInput";
 import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
+import { useState } from "react";
 
 const customTheme = (outerTheme) =>
   createTheme({
@@ -82,6 +83,36 @@ const customTheme = (outerTheme) =>
   });
 const Contact = () => {
   const outerTheme = useTheme();
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+  const [successAlert, setSuccessAlert] = useState(false);
+  function handleChnage(event) {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  }
+  function handleCloseSuccessAlert() {
+    setSuccessAlert(false);
+  }
+  function handleSubmit() {
+    setSuccessAlert(true);
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
+    });
+
+    setTimeout(function () {
+      handleCloseSuccessAlert();
+    }, 1000);
+  }
   return (
     <>
       <Box
@@ -96,16 +127,31 @@ const Contact = () => {
             <span className="insideCustomLine"></span>
           </div>
         </h2>
+        {successAlert && (
+          <Alert
+            onClose={handleCloseSuccessAlert}
+            variant="filled"
+            color="success"
+            style={{
+              position: "absolute",
+              left: "auto",
+              right: "20px",
+              marginTop: "5px",
+            }}
+          >
+            Thank You!😊 I will get back to you soon.
+          </Alert>
+        )}
         <Box
           sx={{
             flexGrow: 1,
             display: "flex",
             justifyContent: "center",
-            // minHeight: "100vh",
+            minHeight: "auto",
             marginTop: "2.5rem",
           }}
         >
-          <Grid container spacing={2} className="container">
+          <Grid container spacing={2}>
             <Grid item xs={12} lg={4}>
               <div style={{ lineHeight: "2.5rem" }}>
                 <p>
@@ -154,7 +200,6 @@ const Contact = () => {
                 </Box>
               </div>
             </Grid>
-
             <Grid item xs={12} lg={8}>
               <Grid container spacing={2}>
                 <ThemeProvider theme={customTheme(outerTheme)}>
@@ -164,6 +209,10 @@ const Contact = () => {
                       label="First name"
                       variant="outlined"
                       margin="normal"
+                      id="firstName"
+                      name="firstName"
+                      onChange={handleChnage}
+                      value={formData.firstName}
                     />
                   </Grid>
                   <Grid item xs={12} md={6}>
@@ -172,6 +221,22 @@ const Contact = () => {
                       label="Last name"
                       variant="outlined"
                       margin="normal"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChnage}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={12}>
+                    <TextField
+                      fullWidth
+                      label="Email address"
+                      variant="outlined"
+                      margin="normal"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChnage}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -179,9 +244,13 @@ const Contact = () => {
                       fullWidth
                       label="Message"
                       multiline
+                      value={formData.message}
                       rows={5}
                       variant="outlined"
                       margin="normal"
+                      id="message"
+                      name="message"
+                      onChange={handleChnage}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -190,6 +259,7 @@ const Contact = () => {
                       variant="contained"
                       size="medium"
                       style={{ float: "right" }}
+                      onClick={handleSubmit}
                     >
                       Send Message <i className="bi bi-arrow-right"></i>
                     </Button>

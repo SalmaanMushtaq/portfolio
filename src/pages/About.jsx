@@ -26,13 +26,7 @@ const About = () => {
           minHeight: "100vh",
         }}
       >
-        <Grid
-          container
-          spacing={1}
-          margin={2}
-          className="container"
-          alignItems="flex-start"
-        >
+        <Grid container spacing={1} margin={2} alignItems="flex-start">
           <Grid item xs={12} lg={6}>
             <Box
               sx={{
