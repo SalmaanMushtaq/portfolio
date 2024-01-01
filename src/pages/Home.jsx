@@ -64,7 +64,7 @@ const Home = () => {
         <Grid item xs={12} lg={6}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <img
-              src="./home.png"
+              src="./assets/ownpictures/home.png"
               alt="Salmaan"
               loading="lazy"
               style={{ maxWidth: "100%", height: "auto" }}

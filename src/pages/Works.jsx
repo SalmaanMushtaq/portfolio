@@ -17,7 +17,7 @@ const worksData = [
     title: "Calculator",
     description:
       "A simple calculator application built using HTML, CSS, and JavaScript. Perform basic arithmetic operations with a clean and user-friendly interface.",
-    image: "/assets/projects/project1.png",
+    image: "./assets/projects/calculator.png",
     githubLink: "https://github.com/SalmaanMushtaq/Skybug/tree/main/calculator",
     date: "25 December 2023",
   },
@@ -26,7 +26,7 @@ const worksData = [
     title: "React Quiz",
     description:
       "An interactive quiz application developed with React.js. Test your knowledge on various topics with multiple-choice questions and receive instant feedback.",
-    image: "/assets/projects/project2.png",
+    image: "./assets/projects/reactQuiz.png",
     githubLink:
       "https://github.com/SalmaanMushtaq/React-projects/tree/main/06-react-quiz",
     date: "01 November 2023",
@@ -36,7 +36,7 @@ const worksData = [
     title: "Project Camp",
     description:
       "Project Camp is a collaborative platform for managing and tracking project details. It provides tools for project planning, task assignment, and progress tracking.",
-    image: "/assets/projects/project3.png",
+    image: "./assets/projects/projectCamp.png",
     githubLink: "https://github.com/SalmaanMushtaq/projectCamp",
     date: "20 April 2022",
   },
@@ -45,7 +45,7 @@ const worksData = [
     title: "Pizza Menu",
     description:
       "Explore a delightful pizza menu created using React.js. Browse through a variety of pizza options, view details, and make your selection.",
-    image: "/assets/projects/project3.png",
+    image: "./assets/projects/pizzaMenu.png",
     githubLink:
       "https://github.com/SalmaanMushtaq/React-projects/tree/main/01-pizza-menu",
     date: "15 October 2023",
@@ -55,7 +55,7 @@ const worksData = [
     title: "Worldwise Application",
     description:
       "Worldwise is an informative application that provides details about countries worldwide. Utilizing React.js, it offers a user-friendly interface for exploring country data.",
-    image: "/assets/projects/project3.png",
+    image: "./assets/projects/worldwise.png",
     githubLink:
       "https://github.com/SalmaanMushtaq/React-projects/tree/main/07-worldwise",
     date: "20 November 2023",
@@ -65,7 +65,7 @@ const worksData = [
     title: "Personal Portfolio",
     description:
       "My personal portfolio showcasing a collection of my projects and achievements. Built with React.js, it reflects my skills and experiences in web development.",
-    image: "/assets/projects/project3.png",
+    image: "./assets/projects/portfolio.png",
     githubLink: "https://github.com/SalmaanMushtaq/portfolio",
     date: "20 December 2023",
   },
