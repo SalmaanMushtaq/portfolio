@@ -15,7 +15,8 @@ const worksData = [
   {
     id: 1,
     title: "Calculator",
-    description: "test description",
+    description:
+      "A simple calculator application built using HTML, CSS, and JavaScript. Perform basic arithmetic operations with a clean and user-friendly interface.",
     image: "/assets/projects/project1.png",
     githubLink: "https://github.com/SalmaanMushtaq/Skybug/tree/main/calculator",
     date: "25 December 2023",
@@ -23,7 +24,8 @@ const worksData = [
   {
     id: 2,
     title: "React Quiz",
-    description: "test description number two",
+    description:
+      "An interactive quiz application developed with React.js. Test your knowledge on various topics with multiple-choice questions and receive instant feedback.",
     image: "/assets/projects/project2.png",
     githubLink:
       "https://github.com/SalmaanMushtaq/React-projects/tree/main/06-react-quiz",
@@ -32,7 +34,8 @@ const worksData = [
   {
     id: 3,
     title: "Project Camp",
-    description: "test description number two",
+    description:
+      "Project Camp is a collaborative platform for managing and tracking project details. It provides tools for project planning, task assignment, and progress tracking.",
     image: "/assets/projects/project3.png",
     githubLink: "https://github.com/SalmaanMushtaq/projectCamp",
     date: "20 April 2022",
@@ -40,7 +43,8 @@ const worksData = [
   {
     id: 4,
     title: "Pizza Menu",
-    description: "test description number two",
+    description:
+      "Explore a delightful pizza menu created using React.js. Browse through a variety of pizza options, view details, and make your selection.",
     image: "/assets/projects/project3.png",
     githubLink:
       "https://github.com/SalmaanMushtaq/React-projects/tree/main/01-pizza-menu",
@@ -49,7 +53,8 @@ const worksData = [
   {
     id: 5,
     title: "Worldwise Application",
-    description: "test description number two",
+    description:
+      "Worldwise is an informative application that provides details about countries worldwide. Utilizing React.js, it offers a user-friendly interface for exploring country data.",
     image: "/assets/projects/project3.png",
     githubLink:
       "https://github.com/SalmaanMushtaq/React-projects/tree/main/07-worldwise",
@@ -58,12 +63,14 @@ const worksData = [
   {
     id: 6,
     title: "Personal Portfolio",
-    description: "test description number two",
+    description:
+      "My personal portfolio showcasing a collection of my projects and achievements. Built with React.js, it reflects my skills and experiences in web development.",
     image: "/assets/projects/project3.png",
     githubLink: "https://github.com/SalmaanMushtaq/portfolio",
     date: "20 December 2023",
   },
 ];
+
 const Works = () => {
   return (
     <>
@@ -107,7 +114,13 @@ const Works = () => {
           <Grid container spacing={3}>
             {worksData.map((work) => (
               <Grid item key={work.id} xs={12} sm={6} md={4}>
-                <Card>
+                <Card
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    height: "100%",
+                  }}
+                >
                   <CardHeader
                     style={{
                       textAlign: "center",
@@ -132,7 +145,7 @@ const Works = () => {
                     image={work.image}
                     alt={work.title}
                   />
-                  <CardContent>
+                  <CardContent style={{ flex: 1, overflow: "auto" }}>
                     <Typography variant="body2">{work.description}</Typography>
                   </CardContent>
                   <CardActions>

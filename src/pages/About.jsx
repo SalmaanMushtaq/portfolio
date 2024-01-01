@@ -48,7 +48,7 @@ const About = () => {
             </Box>
           </Grid>
           <Grid item xs={12} lg={6}>
-            <h2>
+            <h2 style={{ marginTop: "5px" }}>
               <i className="bi bi-person-circle" style={{ margin: "0" }}></i>{" "}
               About Me
               <div className="customLine">

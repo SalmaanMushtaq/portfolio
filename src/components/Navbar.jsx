@@ -13,12 +13,12 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import Logo from "./Logo";
 import styles from "./Navbar.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const pages = ["Home", "About", "Skills", "Works", "Contact"];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+  const navigate = useNavigate();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -94,7 +94,11 @@ function Navbar() {
                       <NavLink
                         to={`/${page.toLowerCase()}`}
                         className={styles.btn}
-                        onClick={handleCloseNavMenu}
+                        onClick={(event) => {
+                          event.preventDefault();
+                          handleCloseNavMenu();
+                          navigate(`/${page.toLowerCase()}`);
+                        }}
                       >
                         {page}
                       </NavLink>
