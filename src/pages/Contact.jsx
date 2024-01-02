@@ -132,12 +132,7 @@ const Contact = () => {
             onClose={handleCloseSuccessAlert}
             variant="filled"
             color="success"
-            style={{
-              position: "absolute",
-              left: "auto",
-              right: "20px",
-              marginTop: "5px",
-            }}
+            className="alert-top"
           >
             Thank You!😊 I will get back to you soon.
           </Alert>

@@ -33,12 +33,12 @@ const worksData = [
   },
   {
     id: 3,
-    title: "Project Camp",
+    title: "ToDO List",
     description:
-      "Project Camp is a collaborative platform for managing and tracking project details. It provides tools for project planning, task assignment, and progress tracking.",
-    image: "./assets/projects/projectCamp.png",
+      "A simple To-Do List application built using React.js. Keep track of your tasks, add new ones, and mark them as completed. An intuitive and user-friendly way to manage your daily activities.",
+    image: "./assets/projects/todoList.png",
     githubLink: "https://github.com/SalmaanMushtaq/projectCamp",
-    date: "20 April 2022",
+    date: "20 April 2023",
   },
   {
     id: 4,

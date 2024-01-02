@@ -96,8 +96,10 @@ function Navbar() {
                         className={styles.btn}
                         onClick={(event) => {
                           event.preventDefault();
-                          handleCloseNavMenu();
                           navigate(`/${page.toLowerCase()}`);
+                          setTimeout(() => {
+                            handleCloseNavMenu();
+                          }, 10);
                         }}
                       >
                         {page}
