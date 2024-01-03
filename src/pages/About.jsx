@@ -35,7 +35,7 @@ const About = () => {
               }}
             >
               <img
-                src="./assets/ownpictures/about-me.jpeg"
+                src="./assets/ownpictures/photo.jpg"
                 alt="Salmaan"
                 loading="lazy"
                 className="responsive-image"
@@ -48,7 +48,7 @@ const About = () => {
             </Box>
           </Grid>
           <Grid item xs={12} lg={6}>
-            <h2 style={{ marginTop: "5px" }}>
+            <h2 style={{ marginTop: "2rem" }}>
               <i className="bi bi-person-circle" style={{ margin: "0" }}></i>{" "}
               About Me
               <div className="customLine">
@@ -59,7 +59,7 @@ const About = () => {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                marginTop: "15%",
+                marginTop: "10%",
               }}
             >
               <p

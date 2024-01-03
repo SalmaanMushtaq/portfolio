@@ -115,6 +115,7 @@ const Works = () => {
             {worksData.map((work) => (
               <Grid item key={work.id} xs={12} sm={6} md={4}>
                 <Card
+                  className="card"
                   style={{
                     display: "flex",
                     flexDirection: "column",
@@ -125,7 +126,6 @@ const Works = () => {
                     style={{
                       textAlign: "center",
                       backgroundColor: "#f5f5f5",
-                      padding: "8px",
                     }}
                     title={
                       <Typography variant="h6" style={{ color: "#333" }}>
