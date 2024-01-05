@@ -84,73 +84,57 @@ const customTheme = (outerTheme) =>
 const Contact = () => {
   const outerTheme = useTheme();
   const [successAlert, setSuccessAlert] = useState(false);
-
+  const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    fullName: "",
     email: "",
     message: "",
   });
-  const [validation, setValidation] = useState({
-    firstName: true,
-    lastName: true,
-    email: true,
-    message: true,
+  const [emailValidation, setEmailValidation] = useState({
+    error: false,
+    helperText: "",
   });
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
   function handleChnage(event) {
     const { name, value } = event.target;
-    let isValid = true;
-
-    if (name === "email") {
-      isValid = /\S+@\S+\.\S+/.test(value);
-    } else {
-      isValid = value.trim() !== "";
-    }
-
-    setValidation({
-      ...validation,
-      [name]: isValid,
-    });
     setFormData({
       ...formData,
       [name]: value,
+    });
+    const isValid = validateEmail(value);
+    setEmailValidation({
+      error: !isValid,
+      helperText: isValid ? "" : "enter a valid email address",
     });
   }
   function handleCloseSuccessAlert() {
     setSuccessAlert(false);
   }
   function handleSubmit() {
-    setValidation((prevValidation) => ({
-      ...prevValidation,
-      firstName: formData.firstName.trim() !== "",
-      lastName: formData.lastName.trim() !== "",
-      email: /\S+@\S+\.\S+/.test(formData.email),
-      message: formData.message.trim() !== "",
-    }));
-
-    const isValidForm =
-      validation.firstName &&
-      validation.lastName &&
-      validation.email &&
-      validation.message;
-
-    if (isValidForm) {
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        message: "",
+    const isValid = validateEmail(formData.email);
+    if (!isValid) {
+      setEmailValidation({
+        error: !isValid,
+        helperText: isValid ? "" : "Enter a valid email address",
       });
-      console.log("inside if", isValidForm);
-      setSuccessAlert(true);
-      setTimeout(function () {
-        handleCloseSuccessAlert();
-      }, 1000);
-    } else {
-      console.error("Form is not valid. Please check all fields.");
+      return;
     }
+    setIsSending(true);
+    setFormData({
+      fullName: "",
+      email: "",
+      message: "",
+    });
+    setSuccessAlert(true);
+    setTimeout(function () {
+      handleCloseSuccessAlert();
+    }, 2000);
+    setIsSending(false);
   }
-
   return (
     <>
       <Box
@@ -239,40 +223,16 @@ const Contact = () => {
                   <Grid item xs={12} md={6}>
                     <TextField
                       fullWidth
-                      label="First name"
+                      label="Enter your full name"
                       variant="outlined"
                       margin="normal"
-                      id="firstName"
-                      name="firstName"
+                      id="fullName"
+                      name="fullName"
                       onChange={handleChnage}
-                      value={formData.firstName}
-                      error={!validation.firstName}
-                      helperText={
-                        !validation.firstName
-                          ? "Please enter your first name"
-                          : ""
-                      }
+                      value={formData.fullName}
                     />
                   </Grid>
                   <Grid item xs={12} md={6}>
-                    <TextField
-                      fullWidth
-                      label="Last name"
-                      variant="outlined"
-                      margin="normal"
-                      id="lastName"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChnage}
-                      error={!validation.lastName}
-                      helperText={
-                        !validation.lastName
-                          ? "Please enter your last name"
-                          : ""
-                      }
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={12}>
                     <TextField
                       fullWidth
                       label="Email address"
@@ -282,12 +242,8 @@ const Contact = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChnage}
-                      error={!validation.email}
-                      helperText={
-                        !validation.email
-                          ? "Please enter your email address"
-                          : ""
-                      }
+                      error={emailValidation.error}
+                      helperText={emailValidation.helperText}
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -302,10 +258,6 @@ const Contact = () => {
                       id="message"
                       name="message"
                       onChange={handleChnage}
-                      error={!validation.message}
-                      helperText={
-                        !validation.message ? "Please enter a message" : ""
-                      }
                     />
                   </Grid>
                   <Grid item xs={12}>
@@ -316,7 +268,7 @@ const Contact = () => {
                       style={{ float: "right" }}
                       onClick={handleSubmit}
                     >
-                      Send Message <i className="bi bi-arrow-right"></i>
+                      {isSending ? "Sending...." : "Send Message"}
                     </Button>
                   </Grid>
                 </ThemeProvider>
