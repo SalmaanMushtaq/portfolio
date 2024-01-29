@@ -20,6 +20,7 @@ const Skill = ({ skills, animationComplete }) => {
                   color: "white",
                   border: "1px solid white",
                   borderRadius: "20px",
+                  boxShadow: "0px 0px 10px rgb(241,246,235)",
                 }}
               >
                 <CardContent>

@@ -76,7 +76,7 @@ const Works = () => {
     <>
       <Box
         sx={{
-          margin: " 0px 20px",
+          margin: " 0px 20px 30px 20px",
           padding: "20px",
         }}
       >
@@ -120,6 +120,8 @@ const Works = () => {
                     display: "flex",
                     flexDirection: "column",
                     height: "100%",
+                    borderRadius: "20px",
+                    marginBottom: "10px",
                   }}
                 >
                   <CardHeader
@@ -141,7 +143,7 @@ const Works = () => {
                   <CardMedia
                     style={{ objectFit: "fill" }}
                     component="img"
-                    height="140"
+                    height="120"
                     image={work.image}
                     alt={work.title}
                   />

@@ -15,7 +15,7 @@ import Logo from "./Logo";
 import styles from "./Navbar.module.css";
 import { NavLink, useNavigate } from "react-router-dom";
 
-const pages = ["Home", "About", "Skills", "Works", "Contact"];
+const pages = ["Home", "About", "Skills", "Projects", "Contact"];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const navigate = useNavigate();
