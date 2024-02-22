@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
-
+import IntroText from "../components/IntroText";
 const Home = () => {
   return (
     <Box
@@ -31,11 +31,11 @@ const Home = () => {
                 color: "inherit",
               }}
             >
-              I&apos;M SALMAAN MUSHTAQ
+              🙋‍♂️ I&apos;M SALMAAN MUSHTAQ
             </Typography>
-            <Typography
-              variant="h6"
-              component="a"
+            {/* <Typography
+              variant="p"
+              component="span"
               sx={{
                 fontFamily: "Cinzel",
                 fontWeight: 300,
@@ -43,13 +43,32 @@ const Home = () => {
                 color: "inherit",
                 marginTop: 1,
               }}
+            > */}
+            <IntroText />
+            {/* </Typography> */}
+            <Typography
+              variant="h6"
+              component="p"
+              sx={{
+                fontFamily: "Cinzel",
+                fontWeight: 100,
+                letterSpacing: ".1rem",
+                color: "inherit",
+                marginTop: 1,
+                textAlign: "start",
+                // padding: "3px",
+                marginLeft: "50px",
+              }}
             >
-              Web Developer
+              Passionate software developer adept in HTML, CSS, JavaScript,
+              Bootstrap, React.js, and jQuery. Specializing in crafting elegant
+              and efficient web applications that resonate with end-users.
             </Typography>
             <Button
               variant="outlined"
               href="./assets/cv/SalmaanMushtaq.pdf"
               download="SalmaanMushtaq-Resume.pdf"
+              className="button"
               sx={{
                 color: "white",
                 borderColor: "white",
@@ -57,7 +76,7 @@ const Home = () => {
               }}
               startIcon={<i className="bi bi-download"></i>}
             >
-              Download CV
+              <span className="button-content">Download CV</span>
             </Button>
           </Box>
         </Grid>
