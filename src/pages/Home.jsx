@@ -1,5 +1,9 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
 import IntroText from "../components/IntroText";
+import About from "./About";
+import Skills from "./Skills";
+import Projects from "./Works";
+import Contact from "./Contact";
 const Home = () => {
   return (
     <Box
@@ -91,6 +95,12 @@ const Home = () => {
             />
           </Box>
         </Grid>
+
+        {/* Other Components */}
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
       </Grid>
     </Box>
   );
