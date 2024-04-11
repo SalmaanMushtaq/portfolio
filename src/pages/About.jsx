@@ -89,37 +89,9 @@ const About = () => {
                   style={{ display: "flex", alignItems: "center", gap: "4px" }}
                 >
                   Share<strong>:</strong>
-                  {/* <a
-                    href="https://www.facebook.com/your-facebook-profile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="bi bi-facebook"></i>
-                  </a>
-                  <a
-                    href="https://twitter.com/your-twitter-profile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="bi bi-twitter text-white"></i>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/your-linkedin-profile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="bi bi-linkedin text-white"></i>
-                  </a>
-                  <a
-                    href="https://github.com/your-github-profile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="bi bi-github text-white"></i>
-                  </a> */}
                   <a
                     className="socialContainer containerOne"
-                    href="https://www.instagram.com/your-instagram-profile"
+                    href="https://www.instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -128,7 +100,7 @@ const About = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://twitter.com/your-twitter-profile"
+                    href="https://twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="socialContainer containerTwo"
@@ -138,7 +110,7 @@ const About = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/your-linkedin-profile"
+                    href="https://www.linkedin.com/in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="socialContainer containerThree"
