@@ -87,10 +87,14 @@ const Home = () => {
         <Grid item xs={12} lg={6}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <img
-              src="./assets/ownpictures/photo.png"
+              src="./assets/ownpictures/front.jpeg"
               alt="Salmaan"
               loading="lazy"
-              style={{ maxWidth: "100%", height: "auto" }}
+              style={{
+                maxWidth: "100%",
+                height: "27rem",
+                borderRadius: "50% 50% 0 0",
+              }}
               className="responsive-image"
             />
           </Box>
